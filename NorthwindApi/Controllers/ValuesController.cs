@@ -19,7 +19,7 @@ namespace NorthwindApi.Controllers
             return new string[] { "value1","value2"};
         }
 
-        // GET api/values
+        // GET api/data/categories
         [Route("categories")]
         [HttpGet]
         public IEnumerable<Category> GetCategories()
