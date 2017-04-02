@@ -1,10 +1,7 @@
-﻿using System;
+﻿using NorthwindApi.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using NorthwindApi.Models;
 
 namespace NorthwindApi.Controllers
 {
@@ -22,11 +19,11 @@ namespace NorthwindApi.Controllers
         // GET api/values
         [Route("categories")]
         [HttpGet]
-        public IEnumerable<Category> GetCategories()
+        public IEnumerable<string> GetCategories()
         {
             NorthwindEntities context = new NorthwindEntities();
 
-            return context.Categories;
+            return context.Categories.Select(c=>c.CategoryName);
         }
 
         // GET api/values/5
