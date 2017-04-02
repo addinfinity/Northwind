@@ -1,0 +1,5 @@
+packages/
+NorthwindApi/bin/
+NorthwindApi/obj/
+*.user
+.vs/
